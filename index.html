@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Lehn - Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary': '#2D3748',
+                    'secondary': '#4A5568',
+                    'accent': '#3182CE',
+                },
+                fontFamily: {
+                    'sans': ['Inter', 'sans-serif'],
+                },
+            }
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .bento-item {
+            border-radius: 1rem;
+            padding: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-primary">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <header-component></header-component>
+        
+        <main class="py-12">
+            <div class="bento-grid">
+                <div class="bento-item col-span-3 animate__animated animate__fadeIn">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Paul Lehn</h1>
+                    <p class="text-xl sm:text-2xl md:text-3xl text-secondary mb-6">Senior Software Engineer</p>
+                    <p class="text-lg">Dedicated Mobile Application Developer adept at creating and managing apps and solutions for clients ranging from small startups to The US Government.</p>
+                </div>
+
+                <div id="about" class="bento-item col-span-2 animate__animated animate__fadeIn">
+                    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                    <div class="flex flex-col md:flex-row items-center">
+                        <img src="profile.jpeg" alt="Paul in front of a scenic river valley" class="w-48 h-48 rounded-full object-cover mb-4 md:mb-0 md:mr-8">
+                        <div>
+                            <p class="mb-4">I'm a Senior Software Engineer with over 10 years of experience in the technology industry. My expertise lies in mobile application development, specializing in the iOS ecosystem.</p>
+                            <p>I'm passionate about creating innovative solutions and have worked on projects for clients ranging from small startups to the US Government.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="skills" class="bento-item animate__animated animate__fadeIn">
+                    <h2 class="text-3xl font-bold mb-4">Skills</h2>
+                    <ul class="list-disc list-inside">
+                        <li>Mobile Application Development</li>
+                        <li>CI/CD pipelines</li>
+                        <li>Website Development</li>
+                        <li>Database Management</li>
+                        <li>Version-control</li>
+                        <li>Software/IDEs</li>
+                        <li>English, Croatian</li>
+                    </ul>
+                </div>
+
+                <div id="experience" class="bento-item col-span-2 animate__animated animate__fadeIn">
+                    <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold">Senior Software Engineer</h3>
+                        <p class="text-secondary">Updater | New York, NY | 04/2021 to Current</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li>Managing suite of Updater apps for the moving industry</li>
+                            <li>Full redesign and refactors of existing codebases</li>
+                            <li>Feature development with A/B tested rollouts</li>
+                            <li>Built robust CI/CD pipeline for mobile team</li>
+                            <li>SwiftUI build of HSCGO app for U.S. Armed Forces and DoD civilians</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold">Principal Application Developer</h3>
+                        <p class="text-secondary">Reatro Ventures, LLC. | Boca Raton, FL | 12/2017 to 04/2021</p>
+                        <p class="mt-2">Lead developer of mobile applications for Reatro Ventures, working with a close-knit team to implement ideas and bring them to life on the app store.</p>
+                        <p class="mt-2 font-semibold">Some examples of apps released:</p>
+                        <ul class="list-disc list-inside mt-2">
+                            <li><a href="https://www.emvite.com/" class="text-accent hover:text-primary">Emvite</a>: Emoji based social media</li>
+                            <li><a href="https://iheartmacandcheese.com/" class="text-accent hover:text-primary">I Heart Mac & Cheese</a>: Fast casual restaurant app</li>
+                            <li><a href="https://apps.apple.com/us/app/picklejar-live/id1517697776" class="text-accent hover:text-primary">PickleJar</a>: Live performance tipping</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="projects" class="bento-item animate__animated animate__fadeIn">
+                    <h2 class="text-3xl font-bold mb-4">Notable Projects</h2>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="project-card">
+                            <h3 class="text-2xl font-bold">HSCGO</h3>
+                            <p>SwiftUI app for U.S. Armed Forces and DoD civilians' moves.</p>
+                            <p><a href="https://apps.apple.com/us/app/hsc-go/id1612279253" class="text-accent hover:text-primary mx-2"><i class="fas fa-external-link-alt mr-1"></i> View on App Store</a></p>
+                        </div>
+                        <div class="project-card">
+                            <h3 class="text-2xl font-bold">Dolly Customer and Helper</h3>
+                            <p>Nationally available On-demand moving service apps</p>
+                            <p><a href="https://apps.apple.com/us/app/dolly-moving-delivery-help/id881999615" class="text-accent hover:text-primary mx-2"><i class="fas fa-external-link-alt mr-1"></i> View on App Store</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="education" class="bento-item col-span-3 animate__animated animate__fadeIn">
+                    <h2 class="text-3xl font-bold mb-4">Education</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-2xl font-bold">Bachelor of Science in Computer Science</h3>
+                            <p class="text-secondary">Palm Beach Atlantic University, West Palm Beach, Florida | 12/2014</p>
+                            <p>Honors: Computer Science Club Treasurer, Community Service, Winner of the Palm Beach Atlantic computer game programming contest for 2012</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">High School Diploma</h3>
+                            <p class="text-secondary">The American International School of Zagreb, Zagreb, Croatia | 05/2011</p>
+                            <p>IB Diploma (International Baccalaureate), GPA 3.7</p>
+                            <p>Honors: Student Government, Intramural Basketball, Community Service</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contact" class="bento-item col-span-3 animate__animated animate__fadeIn">
+                    <h2 class="text-3xl font-bold mb-4">Contact</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Fort Lauderdale, FL 33301</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2"></i>(803) 369-5584</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2"></i><a href="mailto:pmlehn@gmail.com">pmlehn@gmail.com</a></p>
+                        <p class="mb-2"><i class="fab fa-linkedin mr-2"></i><a href="https://www.linkedin.com/in/paul-lehn-8011aa95/#" target="_blank">LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer-component></footer-component>
+    </div>
+
+    <script>
+        class Header extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <header class="py-6">
+                        <nav class="flex flex-wrap justify-between items-center">
+                            <a href="index.html#" class="text-2xl font-bold">Paul Lehn</a>
+                            <button id="mobile-menu-button" class="md:hidden">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <ul id="mobile-menu" class="hidden w-full md:flex md:w-auto mt-4 md:mt-0">
+                                <li><a href="index.html#about" class="block py-2 px-4 hover:text-accent">About</a></li>
+                                <li><a href="index.html#skills" class="block py-2 px-4 hover:text-accent">Skills</a></li>
+                                <li><a href="index.html#experience" class="block py-2 px-4 hover:text-accent">Experience</a></li>
+                                <li><a href="index.html#projects" class="block py-2 px-4 hover:text-accent">Projects</a></li>
+                                <li><a href="index.html#education" class="block py-2 px-4 hover:text-accent">Education</a></li>
+                                <li><a href="index.html#contact" class="block py-2 px-4 hover:text-accent">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                `;
+                this.initializeMenu();
+            }
+
+            initializeMenu() {
+                const mobileMenuButton = this.querySelector('#mobile-menu-button');
+                const mobileMenu = this.querySelector('#mobile-menu');
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            }
+        }
+
+        class Footer extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <footer class="py-6 text-center">
+                        <p>&copy; 2025 Paul Lehn. All rights reserved.</p>
+                        <div class="mt-4">
+                            <a href="https://www.linkedin.com/in/paul-lehn-8011aa95/#" class="text-accent hover:text-primary mx-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/uknowmeright" class="text-accent hover:text-primary mx-2"><i class="fab fa-github"></i></a>
+                        </div>
+                    </footer>
+                `;
+            }
+        }
+
+        customElements.define('header-component', Header);
+        customElements.define('footer-component', Footer);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.bento-item');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeIn');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
