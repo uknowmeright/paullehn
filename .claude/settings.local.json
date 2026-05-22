@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(anthropic-skills:docx)",
+      "Skill(anthropic-skills:docx:*)",
+      "Bash(pip3 install *)",
+      "Bash(ls \"/Users/paullehn/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/3b6c6385-814a-4c1b-aa7e-d7e195d55f1a/58860b83-6b1c-44d4-a4e5-02c7d3802dc7/skills/docx/scripts/office/\")"
+    ]
+  }
+}
